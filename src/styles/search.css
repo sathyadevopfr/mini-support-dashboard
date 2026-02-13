@@ -1,0 +1,32 @@
+/* ===== SEARCH BAR ===== */
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+/* ===== SEARCH INPUT =====
+   outline: none = removes the browser's default blue outline on focus.
+   transition: smoothly animates border and shadow changes over 0.2s.
+   box-shadow on focus: creates a soft glow ring around the input (like a "focus ring").
+     0 0 0 3px = no offset, no blur, 3px spread = a solid ring.
+     rgba(74, 108, 247, 0.1) = very faint blue.
+*/
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+}
+
+/* ::placeholder = styles the grey hint text inside the input */
+.search-input::placeholder {
+  color: #9ca3af;
+}
