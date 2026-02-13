@@ -1,0 +1,107 @@
+/* ===== TICKETS PAGE CONTAINER =====
+   max-width: caps the page width so it doesn't stretch on ultra-wide screens.
+   margin: 0 auto = center horizontally.
+*/
+.tickets-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== TICKET CARDS LIST =====
+   flex + column = stack cards vertically.
+   gap: space between each card (no need for margin-bottom on individual cards).
+*/
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ===== INDIVIDUAL TICKET CARD =====
+   transition: smoothly animates property changes over 0.2 seconds.
+   We transition transform, box-shadow, and border-color for the hover effect.
+   cursor: pointer = shows the hand icon on hover.
+*/
+.ticket-card {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+/* ===== CARD HOVER EFFECT =====
+   transform: translateY(-2px) = moves the card UP by 2px (lift effect).
+   box-shadow: creates a soft shadow underneath to enhance the "floating" look.
+   rgba(74,108,247, 0.08) = blue with 8% opacity.
+*/
+.ticket-card:hover {
+  transform: translateY(-2px);
+  border-color: #4a6cf7;
+  box-shadow: 0 4px 12px rgba(74, 108, 247, 0.08);
+}
+
+/* ===== CARD TOP ROW =====
+   Holds the ticket ID badge and customer name side by side.
+   justify-content: space-between = badge on left, customer on right.
+   flex-wrap: wrap = if screen is too narrow, items wrap to next line instead of overflowing.
+*/
+.ticket-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== TICKET ID BADGE =====
+   Color-coded pill shape badge showing the ticket number.
+   We use a gradient background for a modern look.
+   font-variant-numeric: tabular-nums = makes all digits the same width (so #1 and #100 align nicely).
+*/
+.ticket-id {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #4a6cf7;
+  background: linear-gradient(135deg, rgba(74, 108, 247, 0.1), rgba(74, 108, 247, 0.05));
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(74, 108, 247, 0.2);
+  font-variant-numeric: tabular-nums;
+}
+
+.ticket-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: #1a1a2e;
+  text-transform: capitalize;
+  line-height: 1.4;
+}
+
+.ticket-body {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+/* ===== CUSTOMER NAME =====
+   Small text with a subtle icon-like dot before it.
+*/
+.ticket-customer {
+  font-size: 0.8rem;
+  color: #4a6cf7;
+  font-weight: 500;
+}
+
+.no-results {
+  text-align: center;
+  color: #9ca3af;
+  padding: 3rem 1rem;
+  font-size: 0.95rem;
+}
+
