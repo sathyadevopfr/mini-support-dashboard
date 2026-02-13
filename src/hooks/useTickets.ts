@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import type { TicketWithCustomer, User } from '../../types';
+import type { TicketWithCustomer, User } from '../types';
 import { ticketService } from '../services/ticket.service';
 import { userService } from '../services/user.service';
 

@@ -1,4 +1,4 @@
-import type { User } from '../../types';
+import type { User } from '../types';
 import { ApiService } from './api.service';
 
 class UserService extends ApiService {

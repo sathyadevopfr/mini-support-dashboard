@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import { useTicketDetail } from '../../client/hooks/useTicketDetail';
+import { useTicketDetail } from '../../hooks/useTicketDetail';
 import { BackButton } from '../../components/ui/BackButton';
 import { ErrorMessage } from '../../components/ui/ErrorMessage';
 import { LoadingSpinner } from '../../components/ui/LoadingSpinner';

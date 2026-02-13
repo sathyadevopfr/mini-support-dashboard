@@ -1,4 +1,4 @@
-import type { Ticket } from '../../types';
+import type { Ticket } from '../types';
 import { ApiService } from './api.service';
 
 class TicketService extends ApiService {

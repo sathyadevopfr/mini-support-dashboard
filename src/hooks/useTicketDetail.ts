@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import type { Comment, Ticket, User } from '../../types';
+import type { Comment, Ticket, User } from '../types';
 import { commentService } from '../services/comment.service';
 import { ticketService } from '../services/ticket.service';
 import { userService } from '../services/user.service';

@@ -1,4 +1,4 @@
-import type { Comment } from '../../types';
+import type { Comment } from '../types';
 import { ApiService } from './api.service';
 
 class CommentService extends ApiService {

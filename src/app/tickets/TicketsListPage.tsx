@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { useTickets } from '../../client/hooks/useTickets';
+import { useTickets } from '../../hooks/useTickets';
 import { ErrorMessage } from '../../components/ui/ErrorMessage';
 import { LoadingSpinner } from '../../components/ui/LoadingSpinner';
 import { SearchBar } from '../../components/ui/SearchBar';
