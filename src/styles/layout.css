@@ -1,0 +1,64 @@
+/* ===== LAYOUT =====
+   Wraps the entire app: sticky header on top, page content below.
+   "sticky" means the header stays visible even when you scroll down.
+*/
+
+.layout {
+  min-height: 100vh;               /* vh = viewport height. 100vh = full screen height */
+  display: flex;
+  flex-direction: column;          /* stack header and main vertically */
+}
+
+/* ===== HEADER =====
+   position: sticky  → sticks to the top when scrolling (unlike fixed, it still takes space in layout)
+   top: 0            → stick at the very top
+   z-index: 100      → sits above other content (higher number = on top)
+*/
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1a1a2e;       /* dark navy background */
+  border-bottom: 1px solid #2d2d44;
+  padding: 0 1.5rem;               /* rem = relative to root font size (usually 16px), so 1.5rem = 24px */
+}
+
+/* max-width + margin auto = centers the content with a max width */
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;                  /* auto left/right margins = horizontally centered */
+  display: flex;                   /* flexbox: lays children in a row */
+  align-items: center;             /* vertically center children */
+  justify-content: space-between;  /* push logo left, nav right */
+  height: 56px;
+}
+
+.header-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;         /* slightly tighter letter spacing for a clean look */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;                    /* space between nav items */
+}
+
+/* The green "Live" badge */
+.nav-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #10b981;                  /* green text */
+  background-color: rgba(16, 185, 129, 0.1);  /* very faint green background. rgba = red,green,blue,alpha(opacity) */
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;           /* huge radius = pill shape */
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* flex: 1 = take up all remaining vertical space after the header */
+.main-content {
+  flex: 1;
+  padding: 2rem 1.5rem;
+}

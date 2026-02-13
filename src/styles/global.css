@@ -1,0 +1,51 @@
+/* ===== CSS RESET =====
+   * = selects ALL elements.
+   Removes browser default margins/paddings so we start from zero.
+   box-sizing: border-box = padding and border are INCLUDED in width/height
+   (without this, a 200px box with 20px padding becomes 240px wide)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE BODY STYLES =====
+   font-family: the browser tries each font left to right, uses the first one installed.
+   -apple-system = macOS/iOS, BlinkMacSystemFont = Chrome on Mac, then fallbacks.
+   line-height: 1.6 = space between lines is 1.6x the font size (good readability).
+   -webkit-font-smoothing: makes fonts look smoother on Mac screens.
+*/
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Remove default link underline and color so we can style them ourselves */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== PAGE TITLE =====
+   Used on both pages for the main heading.
+   letter-spacing: -0.02em = slightly tighter letters (looks more modern/professional)
+*/
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #1a1a2e;
+  letter-spacing: -0.02em;
+}
+
+/* Subtitle text below the page title */
+.page-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
