@@ -57,6 +57,23 @@
   border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
+/* Logout button in the header */
+.logout-button {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
 /* flex: 1 = take up all remaining vertical space after the header */
 .main-content {
   flex: 1;

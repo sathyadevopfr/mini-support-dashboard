@@ -1,0 +1,88 @@
+/* Centers the form in the middle of the screen */
+.auth-page {
+  display: flex;
+  justify-content: center;    /* horizontal center */
+  align-items: center;         /* vertical center */
+  min-height: 80vh;            /* takes most of the screen height */
+}
+
+/* The form card */
+.auth-form {
+  background-color: #1e1e2e;
+  border: 1px solid #2d2d44;
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;            /* form won't grow beyond 400px */
+  display: flex;
+  flex-direction: column;      /* stack children vertically */
+  gap: 1rem;                   /* space between each child */
+}
+
+.auth-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Error message shown when login/register fails */
+.auth-error {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Email and password input fields */
+.auth-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #2d2d44;
+  border-radius: 8px;
+  background-color: #16162a;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  outline: none;               /* removes the default blue outline */
+  transition: border-color 0.2s;
+}
+
+.auth-input:focus {
+  border-color: #6366f1;       /* purple border when focused */
+}
+
+/* Submit button */
+.auth-button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6366f1;   /* purple */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-button:hover {
+  background-color: #4f46e5;   /* darker purple on hover */
+}
+
+/* Link text at the bottom */
+.auth-link {
+  text-align: center;
+  color: #a0a0b0;
+  font-size: 0.85rem;
+}
+
+.auth-link a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}

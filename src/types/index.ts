@@ -25,3 +25,13 @@ export interface Comment {
   email: string;
   body: string;
 }
+
+export interface AuthRequest {
+  username: string;
+  password: string;
+}
+
+export interface AuthResponse {
+  accessToken: string;
+  username: string;
+}

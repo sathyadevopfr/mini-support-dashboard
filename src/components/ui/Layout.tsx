@@ -1,12 +1,11 @@
-import type { ReactNode } from 'react';
+import { Outlet } from 'react-router-dom';
 
+import { useAuth } from '../../context/AuthContext';
 import '../../styles/layout.css';
 
-interface LayoutProps {
-  children: ReactNode;
-}
+export const Layout = () => {
+  const { logout } = useAuth();
 
-export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="layout">
       <header className="header">
@@ -14,10 +13,13 @@ export const Layout = ({ children }: LayoutProps) => {
           <h1 className="header-logo">SupportDesk</h1>
           <nav className="header-nav">
             <span className="nav-status">Live</span>
+            <button className="logout-button" onClick={logout}>Logout</button>
           </nav>
         </div>
       </header>
-      <main className="main-content">{children}</main>
+      <main className="main-content">
+        <Outlet />
+      </main>
     </div>
   );
 };
