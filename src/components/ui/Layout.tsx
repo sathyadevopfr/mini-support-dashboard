@@ -4,17 +4,19 @@ import { useAuth } from '../../context/AuthContext';
 import '../../styles/layout.css';
 
 export const Layout = () => {
-  const { logout } = useAuth();
+  const { isLoggedIn, logout } = useAuth();
 
   return (
     <div className="layout">
       <header className="header">
         <div className="header-content">
           <h1 className="header-logo">SupportDesk</h1>
-          <nav className="header-nav">
-            <span className="nav-status">Live</span>
-            <button className="logout-button" onClick={logout}>Logout</button>
-          </nav>
+          {isLoggedIn && (
+            <nav className="header-nav">
+              <span className="nav-status">Live</span>
+              <button className="logout-button" onClick={logout}>Logout</button>
+            </nav>
+          )}
         </div>
       </header>
       <main className="main-content">

@@ -20,11 +20,11 @@ export const AppRouter = () => {
             <Route path="*" element={<Navigate to="/" />} />
           </Route>
         ) : (
-          <>
+          <Route element={<Layout />}>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="*" element={<Navigate to="/login" />} />
-          </>
+          </Route>
         )}
       </Routes>
     </BrowserRouter>
